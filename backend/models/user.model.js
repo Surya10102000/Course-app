@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userschema = mongoose.Schema({
+const userschema = new mongoose.Schema({
     username : {
         type : String ,
         required : [true, "username is required"],
@@ -18,8 +18,9 @@ const userschema = mongoose.Schema({
     course : {
         type : [
             {
-                type : Schema.Types.ObjectId,
-                ref :  'course'
+                type : mongoose.Schema.Types.ObjectId,
+                ref :  'course',
+                default : []
             }
         ]
     },
