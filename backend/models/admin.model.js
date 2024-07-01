@@ -8,22 +8,13 @@ const adminschema = mongoose.Schema({
     },
     email : {
         type : String ,
-        required :[ true , "Please enter an emaili"],
+        required :[ true , "Please enter an email"],
         unique : true,
     },
     password : {
         type : String ,
         required : true
     },
-    course : {
-        type : [
-            {
-                type : Schema.Types.ObjectId,
-                ref :  'course'
-            }
-        ]
-    },
-    
     
 })
 

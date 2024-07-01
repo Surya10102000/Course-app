@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const courseSchema = mongoose.Schema({
     name : {
@@ -17,6 +17,10 @@ const courseSchema = mongoose.Schema({
     link : {
         type  : String,
         required : true
+    },
+    admin : {
+        type : Schema.Types.ObjectId,
+        ref : 'admin'
     }
 })
 
