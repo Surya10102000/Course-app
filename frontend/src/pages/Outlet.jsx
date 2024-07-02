@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
-
+import Navbar from '../components/Navbar'
+import UserLogin from './UserLogin'
+import UserSignup from './UserSignup'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from './pages/HomePage';
-import UserSignup from './pages/UserSignup';
-import UserLogin from './pages/UserLogin';
-import Navbar from './components/Navbar';
 
-
-const App = () => {
+const Outlet = () => {
     const [Loggedin, setLoggedin] = useState(false)
   return ( <>
     <Router>
@@ -23,4 +20,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Home
